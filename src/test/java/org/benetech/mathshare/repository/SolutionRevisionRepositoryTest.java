@@ -21,7 +21,7 @@ public class SolutionRevisionRepositoryTest {
     @Test
     public void shouldSaveSolutionRevision() {
         int dbSizeBeforeSave = solutionRevisionRepository.findAll().size();
-        solutionRevisionRepository.saveAndFlush(SolutionRevisionMother.createValidInstance());
+        solutionRevisionRepository.saveAndFlush(SolutionRevisionMother.validInstance());
         int dbSizeAfterSave = solutionRevisionRepository.findAll().size();
         Assert.assertEquals(dbSizeBeforeSave + 1, dbSizeAfterSave);
     }

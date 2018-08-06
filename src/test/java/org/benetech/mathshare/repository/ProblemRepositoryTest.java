@@ -21,7 +21,7 @@ public class ProblemRepositoryTest {
 
     @Test
     public void shouldSaveProblem() {
-        problemRepository.save(ProblemMother.createValidInstance());
+        problemRepository.save(ProblemMother.validInstance());
         Problem problemFromDB = problemRepository.findAll().get(0);
         Assert.assertEquals(ProblemMother.DEFAULT_PROBLEM_TEXT, problemFromDB.getProblemText());
     }

@@ -6,4 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ProblemSetRevisionRepository extends JpaRepository<ProblemSetRevision, Long> {
+
+    //TODO: Test
+    ProblemSetRevision findOneByShareCode(Long code);
 }

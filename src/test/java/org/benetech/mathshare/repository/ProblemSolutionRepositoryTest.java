@@ -21,7 +21,7 @@ public class ProblemSolutionRepositoryTest {
     @Test
     public void shouldSaveProblemSolution() {
         int dbSizeBeforeSave = problemSolutionRepository.findAll().size();
-        problemSolutionRepository.saveAndFlush(ProblemSolutionMother.createValidInstance());
+        problemSolutionRepository.saveAndFlush(ProblemSolutionMother.validInstance());
         int dbSizeAfterSave = problemSolutionRepository.findAll().size();
         Assert.assertEquals(dbSizeBeforeSave + 1, dbSizeAfterSave);
     }
